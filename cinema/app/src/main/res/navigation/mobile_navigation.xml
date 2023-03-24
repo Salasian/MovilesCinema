@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_inicio">
+
+    <fragment
+        android:id="@+id/navigation_inicio"
+        android:name="salas.ian.cinema.ui.inicio.InicioFragment"
+        android:label="@string/title_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/navigation_cartelera"
+        android:name="salas.ian.cinema.ui.cartelera.CarteleraFragment"
+        android:label="@string/title_cartelera"
+        tools:layout="@layout/fragment_cartelera" />
+
+    <fragment
+        android:id="@+id/navigation_estrenos"
+        android:name="salas.ian.cinema.ui.estrenos.EstrenosFragment"
+        android:label="@string/title_estrenos"
+        tools:layout="@layout/fragment_estrenos" />
+
+    <fragment
+        android:id="@+id/navigation_cines"
+        android:name="salas.ian.cinema.ui.cines.CinesFragment"
+        android:label="@string/title_cines"
+        tools:layout="@layout/fragment_cines" />
+
+    <fragment
+        android:id="@+id/navigation_perfil"
+        android:name="salas.ian.cinema.ui.perfil.PerfilFragment"
+        android:label="@string/title_perfil"
+        tools:layout="@layout/fragment_perfil" />
+</navigation>

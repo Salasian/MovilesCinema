@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">cinema</string>
+    <string name="title_inicio">Inicio</string>
+    <string name="title_cartelera">Cartelera</string>
+    <string name="title_estrenos">Estrenos</string>
+    <string name="title_cines">Cines</string>
+    <string name="title_perfil">Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
