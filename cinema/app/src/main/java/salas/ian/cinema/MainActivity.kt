@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.navigation_inicio, R.id.navigation_cartelera, R.id.navigation_estrenos,R.id.navigation_cines,R.id.navigation_perfil
             )
         )
-        setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
 }

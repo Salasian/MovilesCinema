@@ -41,6 +41,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="160dp"
             android:layout_marginVertical="50dp"
+            android:src="@drawable/baseline_buscar"
             />
 
         <ImageButton
@@ -49,6 +50,7 @@
             android:layout_height="40dp"
             android:layout_marginLeft="5dp"
             android:layout_marginVertical="50dp"
+            android:src="@drawable/baseline_filtros"
             />
     </LinearLayout>
 
