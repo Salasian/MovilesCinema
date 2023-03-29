@@ -1,22 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="400dp"
+    android:layout_height="350dp"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="85dp"
-        android:layout_height="113dp"
+        android:layout_width="110dp"
+        android:layout_height="170dp"
         android:layout_gravity="center"
+        android:layout_marginLeft="-20dp"
         android:id="@+id/image_movie_cell"
         android:scaleType="fitXY"/>
 
     <TextView
+        android:id="@+id/movie_title_cell"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="-6dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/categoria1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:fontFamily="sans-serif-light"
         android:layout_gravity="center"
-        android:id="@+id/movie_title_cell"/>
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:layout_marginLeft="-48dp"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="4dp"
+        android:textColor="@color/Banner"
+        android:textSize="6sp" />
+
+    <TextView
+        android:id="@+id/categoria2"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="-5dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-16dp"
+        android:background="@color/white"
+        android:fontFamily="@font/roboto_bold"
+        android:gravity="center"
+        android:padding="4dp"
+        android:visibility="gone"
+        android:textColor="@color/Banner"
+        android:textSize="6sp" />
+
+
+    <RatingBar
+        android:id="@+id/ratingbar"
+        android:layout_width="235dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-10dp"
+        android:layout_marginLeft="-70dp"
+        android:numStars="5"
+        android:stepSize="0.5"
+        android:progressTint="@color/yellow"
+        android:scaleX="0.4"
+        android:scaleY="0.4" />
 
 </LinearLayout>

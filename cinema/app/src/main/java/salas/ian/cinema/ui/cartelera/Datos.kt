@@ -19,12 +19,14 @@ class Datos: AppCompatActivity() {
         var id = -1
         var title = ""
 
-        var header_image: ImageView = findViewById(R.id.imagen)
         var sinopsis: TextView = findViewById(R.id.Sinopsis)
         var titulo: TextView = findViewById(R.id.titulo)
         var imagen: ImageView = findViewById(R.id.imagen)
         var director: TextView = findViewById(R.id.director)
         var reparto: TextView = findViewById(R.id.reparto)
+        var reparto1: TextView= findViewById(R.id.reparto1)
+        var reparto2: TextView= findViewById(R.id.reparto2)
+        var reparto3: TextView= findViewById(R.id.reparto3)
         var duracion: TextView = findViewById(R.id.duracion)
         var clasificacion: TextView = findViewById(R.id.clasificacion)
         var categoria: TextView = findViewById(R.id.categoria)
@@ -37,6 +39,9 @@ class Datos: AppCompatActivity() {
             sinopsis.setText(bundle.getString("sinopsis"))
             director.setText(bundle.getString("Director"))
             reparto.setText(bundle.getString("Reparto"))
+            reparto1.setText(bundle.getString("Reparto1"))
+            reparto2.setText(bundle.getString("Reparto2"))
+            reparto3.setText(bundle.getString("Reparto3"))
             clasificacion.setText(bundle.getString("Clasificacion"))
             duracion.setText(bundle.getString("Duracion"))
             categoria.setText(bundle.getString("Categoria"))
