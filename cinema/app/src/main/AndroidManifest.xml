@@ -15,14 +15,15 @@
             android:name=".ui.RegistrarseActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.InicioSesionActivity"
+            android:name=".MainActivity"
             android:exported="false"
             android:theme="@style/Theme.SplashCinema"
             />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.InicioSesionActivity"
             android:exported="true"
             android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
