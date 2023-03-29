@@ -9,12 +9,22 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Cinema"
+        android:theme="@style/Theme.SplashCinema"
         tools:targetApi="31">
         <activity
+            android:name=".ui.RegistrarseActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SplashCinema"
+            />
+        <activity
+            android:name=".ui.InicioSesionActivity"
             android:exported="true"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
