@@ -13,7 +13,8 @@
         tools:targetApi="31">
         <activity
             android:name=".ui.RegistrarseActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"
