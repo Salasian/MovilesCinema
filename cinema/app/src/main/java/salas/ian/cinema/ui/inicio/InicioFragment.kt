@@ -33,8 +33,7 @@ class InicioFragment : Fragment() {
         val root: View = binding.root
 
         val movieList = ArrayList<MovieModel>()
-        movieList.add(MovieModel(R.drawable.ic_launcher_foreground,"Foreground"))
-        movieList.add(MovieModel(R.drawable.ic_launcher_background,"Background"))
+        movieList.add(MovieModel(R.drawable.godzillavskong,""))
 
         val adapter = MovieAdapter(movieList)
 
