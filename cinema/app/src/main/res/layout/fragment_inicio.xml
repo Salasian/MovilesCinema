@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/fragment_inicio_scene"
-    tools:context=".ui.inicio.InicioFragment">
+    tools:context=".ui.inicio.InicioFragment"
+    android:background="@color/almostblack"
+    android:theme="@style/Theme.AppCompat">
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,13 +16,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/inicio_on_192x192" />
 
     <Button
-        android:layout_width="189dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="16dp"
-        android:text="Ciudad Obregon Sonora"
+        android:layout_width="232dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/Fondo"
+        android:text="Ciudad Obregon Sonora, mex"
+        android:textFontWeight="400"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -53,7 +59,11 @@
 
             <TextView
                 android:id="@+id/textView"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
+                android:textSize="25dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:text="Promociones cerca de ti"
                 tools:layout_editor_absoluteX="69dp"
@@ -61,31 +71,31 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-                />
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/promo2x1" />
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-            />
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial1" />
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-            />
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial2" />
+
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
-            />
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial3" />
+
 
 
         </LinearLayout>

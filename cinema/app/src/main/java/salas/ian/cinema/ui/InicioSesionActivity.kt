@@ -19,6 +19,7 @@ class InicioSesionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio_sesion)
+        installSplashScreen()
 
         val btn_ingresar = findViewById<Button>(R.id.btn_ingresar)
         val btn_registrarse = findViewById<Button>(R.id.btn_registrarse)

@@ -36,9 +36,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity
             android:name=".ui.cartelera.Datos"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+=======
+        <activity android:name=".ui.cartelera.Datos"
+            android:theme="@style/Theme.AppCompat"/>
+>>>>>>> a9d29e266fad98c4f22f5adb92435dca2022922d
 
         <meta-data
             android:name="preloaded_fonts"

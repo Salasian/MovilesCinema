@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.estrenos.EstrenosFragment">
+    tools:context=".ui.estrenos.EstrenosFragment"
+    android:background="@color/almostblack"
+    >
 
     <TextView
         android:id="@+id/textView2"
@@ -15,18 +17,26 @@
         android:layout_marginEnd="8dp"
         android:text="Próximos Estrenos"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:textFontWeight="500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/boton"
-        android:layout_width="189dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="4dp"
-        android:text="Ciudad Obregon Sonora"
+        android:layout_width="232dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/Fondo"
+        android:text="Ciudad Obregon Sonora, mex"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -36,7 +46,10 @@
         android:layout_height="match_parent"
         android:layout_marginTop="130dp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        android:background="@color/Banner"
+        android:paddingTop="20dp"
+        >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -46,58 +59,67 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/almostblack">
         <!-- Primer elemento-->
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
             />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/promo2x1"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
+            android:padding="10dp"
             >
 
             <TextView
-                android:layout_width="230dp"
+                android:layout_width="210dp"
                 android:layout_height="30dp"
                 android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/notificacion_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/por_ver_off_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/info_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/compartir_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
@@ -107,89 +129,114 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="40dp"
                 android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
                 />
             <Button
                 android:layout_width="60dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"/>
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
             <Button
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"/>
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="Sinopsis"/>
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="dummytext"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
             />
-        <!-- Segundo elemento-->
+        <!--Segunda película-->
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
             />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="210dp"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/promo2x1"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
+            android:padding="10dp"
             >
 
             <TextView
-                android:layout_width="230dp"
+                android:layout_width="210dp"
                 android:layout_height="30dp"
                 android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/notificacion_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/por_ver_off_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/info_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/compartir_36x36"
                 android:layout_marginLeft="5dp"
                 />
 
@@ -199,38 +246,641 @@
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:orientation="horizontal">
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
 
             <Button
-                android:layout_width="60dp"
+                android:layout_width="40dp"
                 android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
                 />
             <Button
                 android:layout_width="60dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"/>
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
             <Button
-                android:layout_width="60dp"
+                android:layout_width="70dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"/>
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
+            />
+        <!--Tercera película-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/promo2x1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notificacion_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/por_ver_off_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/info_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/compartir_36x36"
+                android:layout_marginLeft="5dp"
+                />
 
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:text="Sinopsis"/>
+            android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:text="dummytext"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
             />
+        <!--Cuarta película-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/promo2x1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notificacion_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/por_ver_off_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/info_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/compartir_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
+            />
+        <!--Quinta película-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/promo2x1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notificacion_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/por_ver_off_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/info_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/compartir_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
+            />
+        <!--Sexta película-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/promo2x1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notificacion_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/por_ver_off_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/info_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/compartir_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
+            />
+        <!--Séptima película-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 de abril"
+            android:textSize="25dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:src="@drawable/promo2x1"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="30dp"
+                android:text="En Guerra Con Mi Abuelo"
+                android:textSize="18dp"
+                android:textFontWeight="600"
+                android:textColor="@color/white"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/notificacion_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/por_ver_off_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/info_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/compartir_36x36"
+                android:layout_marginLeft="5dp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:text="War With Grandpa (2020)"
+            android:paddingLeft="10dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            >
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="S/C"
+                />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="94 min"/>
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:textFontWeight="800"
+                android:textSize="10sp"
+                android:text="Comedia"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Sinopsis"
+            android:paddingStart="10dp"
+            android:textSize="20dp"
+            android:textFontWeight="600"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:text="Peter un niño que tiene una vida normal junto con su familia, se entera que su abuelo vivirla con ellos y se quedarla con su habitación, molesto, decide declarar la guerra en un intento por recuperarla"
+            android:paddingStart="10dp"
+            />
+        <!--Segunda película-->
 
 
     </LinearLayout>

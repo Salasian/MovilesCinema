@@ -4,65 +4,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RegistrarseActivity">
+    tools:context=".ui.RegistrarseActivity"
+    android:background="@color/almostblack">
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Registrate"
-        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:textAllCaps="false"
+        android:text="Regístrate"
+        android:textSize="28sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="wrap_content"
-        android:layout_height="147dp"
+        android:layout_height="110dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="28dp"
-        android:layout_height="25dp"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="226dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/usuario_36x36"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toStartOf="@+id/textView9" />
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="28dp"
-        android:layout_height="25dp"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="330dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/password_36x36"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toStartOf="@+id/textView10" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="28dp"
-        android:layout_height="25dp"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="429dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/password_36x36"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
+        app:layout_constraintEnd_toStartOf="@+id/textView11" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="28dp"
-        android:layout_height="25dp"
-        tools:layout_editor_absoluteX="101dp"
-        tools:layout_editor_absoluteY="531dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:layout_width="20dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/correo_36x36"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toStartOf="@+id/textView12" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="127dp"
         android:layout_height="26dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="30dp"
         android:text="Nombre de Usuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +82,7 @@
         android:id="@+id/textView10"
         android:layout_width="127dp"
         android:layout_height="26dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:text="Repetir Contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +92,7 @@
         android:id="@+id/textView11"
         android:layout_width="127dp"
         android:layout_height="26dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:text="Contraseña"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,8 +102,8 @@
         android:id="@+id/textView12"
         android:layout_width="127dp"
         android:layout_height="26dp"
-        android:layout_marginTop="8dp"
-        android:text="Contraseña"
+        android:layout_marginTop="28dp"
+        android:text="E-mail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
@@ -103,6 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:background="@drawable/roundedittext"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,18 +127,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:ems="10"
+        android:background="@drawable/roundedittext"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -138,6 +138,7 @@
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/roundedittext"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
@@ -151,6 +152,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
+        android:background="@drawable/roundedittext"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -160,10 +162,12 @@
 
     <Button
         android:id="@+id/btn_registrarse2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/roundedbuttonwhite"
         android:text="Registrarse"
+        android:textColor="@color/almostblack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
