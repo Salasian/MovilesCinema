@@ -21,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Inicia Sesión"
+        android:textStyle="bold"
         android:textSize="28sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView6"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,11 +133,13 @@
 
     <Button
         android:id="@+id/btn_registrarse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
+        android:textColor="@color/almostblack"
+        android:background="@drawable/roundedbuttonwhite"
         android:text="Registrarse"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -146,12 +149,14 @@
 
     <Button
         android:id="@+id/btn_ingresar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_width="150dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/roundedbuttonwhite"
         android:text="Ingresar"
+        android:textColor="@color/almostblack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 

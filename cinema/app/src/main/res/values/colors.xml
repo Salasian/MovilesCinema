@@ -9,6 +9,7 @@
     <color name="black">#FF000000</color>
     <color name="almostblack">#070808</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="almostwhite">#EDE5E1</color>
     <color name="Banner">#1E1E1E </color>
     <color name="Fondo">#333333</color>
     <color name="editTextGray">#5D6064</color>
