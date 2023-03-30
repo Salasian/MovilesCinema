@@ -12,7 +12,7 @@
         android:layout_height="147dp"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:src="@mipmap/ic_banner"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -29,12 +29,12 @@
         android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/usuario_36x36"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:srcCompat="@drawable/usuario_36x36" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -45,7 +45,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
 
         app:layout_constraintEnd_toStartOf="@+id/textView4"
-        tools:srcCompat="@drawable/usuario_36x36" />
+        android:src="@drawable/usuario_36x36" />
 
     <ImageView
         android:id="@+id/imageView8"
@@ -57,7 +57,7 @@
         app:layout_constraintEnd_toStartOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/password_36x36" />
+        android:src="@drawable/password_36x36" />
 
     <TextView
         android:id="@+id/textView4"
