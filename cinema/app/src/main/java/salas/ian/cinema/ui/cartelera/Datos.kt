@@ -1,10 +1,15 @@
 package salas.ian.cinema.ui.cartelera
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
-import android.widget.TextView
+import android.view.View
+import android.view.ViewGroup
+import android.widget.*
+import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
 import salas.ian.cinema.R
+
 
 class Datos: AppCompatActivity() {
     var peliculas = ArrayList<Pelicula>()
@@ -12,6 +17,12 @@ class Datos: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detalles_pelicula)
+
+       var menuGrid: GridView= findViewById(R.id.menu)
+        var adaptador= CarteleraFragment.PeliculaAdapter(this, peliculas)
+
+
+        menuGrid.adapter= adaptador
 
 
         val bundle = intent.extras
@@ -50,5 +61,50 @@ class Datos: AppCompatActivity() {
 
         }
 
+    }
+    internal class CustomAdapter(private val mContext: Context) :
+        BaseAdapter() {
+        override fun getCount(): Int {
+            return 3
+        }
+        override fun getItem(position: Int): Any {
+            return position
+        }
+
+        override fun getItemId(position: Int): Long {
+            return 0
+        }
+
+        override fun getView(position: Int, convertView: View, parent: ViewGroup): View {
+            val button: Button
+            if (convertView == null) {
+                button = Button(mContext)
+                button.layoutParams =
+                    AbsListView.LayoutParams(GridView.AUTO_FIT, 150)
+            } else {
+                button = convertView as Button
+            }
+
+            if (position == 0) {
+                button.text = "Datos"
+            } else if (position == 1) {
+                button.text = "Horarios"
+            } else if (position == 2) {
+                button.text = "Calificaciones"
+            }
+
+            button.setOnClickListener {
+                if (position == 0) {
+                    var intento= Intent(button.context, Datos::class.java)
+                    button.context.startActivity(intento)
+                } else if (position == 1) {
+                    // Cargar pantalla 2
+                } else if (position == 2) {
+                    var intento= Intent(button.context, ratingCelda::class.java)
+                    button.context.startActivity(intento)
+                }
+            }
+            return button
+        }
     }
 }

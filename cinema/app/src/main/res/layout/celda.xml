@@ -11,7 +11,6 @@
         android:layout_marginLeft="-20dp"
         android:id="@+id/image_movie_cell"
         android:scaleType="fitXY"/>
-
     <TextView
         android:id="@+id/movie_title_cell"
         android:layout_width="120dp"
@@ -20,7 +19,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="-6dp"
         android:textColor="@color/white"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="sans-serif-black"
         android:textSize="12dp"
         android:textStyle="bold" />
 
@@ -32,7 +31,7 @@
         android:layout_marginTop="2dp"
         android:background="@color/white"
         android:layout_marginLeft="-48dp"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="sans-serif-black"
         android:padding="4dp"
         android:textColor="@color/Banner"
         android:textSize="6sp" />
@@ -45,7 +44,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="-16dp"
         android:background="@color/white"
-        android:fontFamily="@font/roboto_bold"
+        android:fontFamily="sans-serif-black"
         android:gravity="center"
         android:padding="4dp"
         android:visibility="gone"

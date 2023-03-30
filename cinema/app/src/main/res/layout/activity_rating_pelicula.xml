@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="match_parent"
-    tools:context=".rating_pelicula">
+    android:background="@color/Fondo"
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/darker_gray"
+        android:layout_height="70dp"
+        android:background="@color/Banner"
         android:orientation="horizontal">
 
         <TextView
@@ -18,20 +18,23 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-condensed"
-            android:text="Pelicula"
-            android:textAllCaps="true"
-            android:textSize="20sp"
+            android:fontFamily="sans-serif-black"
+            android:text="Película"
+            android:textColor="@color/white"
+            android:textSize="28sp"
             android:textStyle="bold" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="70dp">
+        android:fillViewport="true">
+
         <ListView
+            android:id="@+id/lista"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:dividerHeight="15dp"/>
+    </ScrollView>
 
 </LinearLayout>
