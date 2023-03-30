@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     app:layoutDescription="@xml/fragment_inicio_scene"
     tools:context=".ui.inicio.InicioFragment"
-    android:background="@color/Banner"
+    android:background="@color/almostblack"
     android:theme="@style/Theme.AppCompat">
 
     <ImageView
@@ -62,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:textSize="25dp"
                 android:textFontWeight="600"
+                android:textColor="@color/white"
                 android:padding="10dp"
                 android:layout_height="wrap_content"
                 android:text="Promociones cerca de ti"
