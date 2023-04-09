@@ -26,10 +26,13 @@
     </LinearLayout>
 
     <GridView
+        android:id="@+id/gridView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:numColumns="3"
-        android:id="@+id/menu"/>
+        android:columnWidth="100dp"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"/>
 
     <ImageButton
         android:layout_width="38dp"
