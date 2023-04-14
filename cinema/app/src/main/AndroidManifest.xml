@@ -33,16 +33,12 @@
         <activity
             android:name=".ui.cartelera.Datos"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-<<<<<<< HEAD
-
-=======
         <activity
             android:name=".ui.cartelera.Horarios"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
             android:name=".ui.cartelera.ratingCelda"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
->>>>>>> 5cd845eda273d6010a8a88bcc32244595f09c1b0
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

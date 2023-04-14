@@ -7,30 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.perfil.PerfilFragment"
     android:orientation="vertical"
-    android:background="#312927">
+    android:background="@color/almostblack">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="left">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="240dp"
-            android:layout_height="90dp"
-            android:background="#320302"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:paddingTop="10dp"
+            android:src="@drawable/inicio_on_192x192"
             app:layout_constraintBottom_toBottomOf="@id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/person_24dp"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,57 +41,63 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout"
             android:layout_width="150dp"
-            android:layout_height="180dp"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.47"
+            app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toEndOf="@+id/imageView3"
-            app:layout_constraintTop_toBottomOf="@+id/imageView2"
-            app:layout_constraintVertical_bias="1.0"
-            >
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginTop="10dp"
-                android:padding="30dp"
-                android:src="@drawable/ic_launcher_background"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="13dp"
+                android:src="@drawable/inicio_on_192x192"
+                app:layout_constraintBottom_toTopOf="@+id/btn_conseguirMonedas"
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout"
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
             <TextView
+                android:id="@+id/textView13"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
-                android:text="0000"
-                android:textColor="@color/white"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
                 android:src="@drawable/ic_launcher_background"
+                android:text="0000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:paddingTop="10dp"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
                 app:layout_constraintTop_toTopOf="@+id/constraintLayout" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginHorizontal="4dp"
-            android:id="@+id/btn_conseguirMonedas"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
-            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-            android:text="Conseguir Monedas"
-            android:textSize="8sp"/>
+            <Button
+                android:id="@+id/btn_conseguirMonedas"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginHorizontal="4dp"
+                android:text="Conseguir Monedas"
+                android:textSize="8sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+                app:layout_constraintTop_toBottomOf="@+id/textView13"
+                app:layout_constraintVertical_bias="0.0" />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginHorizontal="4dp"
+                android:text="Conseguir Monedas"
+                android:textSize="8sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
                 app:layout_constraintStart_toStartOf="@+id/constraintLayout"
-                app:layout_constraintTop_toTopOf="@+id/btn_conseguirMonedas"
-                android:text="Conseguir Monedas"
-                android:textSize="8sp"/>
+                app:layout_constraintTop_toBottomOf="@+id/btn_conseguirMonedas"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -100,67 +108,107 @@
         android:columnCount="1">
 
         <TextView
-            android:layout_width="200dp"
+            android:layout_width="178dp"
             android:layout_height="wrap_content"
-            android:text="Daniel Salas"
-            android:textSize="35sp"
+            android:text="DanielSl"
+            android:textStyle="bold"
             android:textColor="@color/white"
-            android:gravity="center" />
+            android:textSize="25sp"
+            android:paddingBottom="7dp"
+            android:paddingLeft="20dp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hola, este es mi perfil."
             android:textColor="@color/white"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="20dp"
+            android:paddingBottom="10dp"/>
+
     </GridLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/Fondo">
 
         <GridLayout
-            android:layout_width="match_parent"
+            android:layout_width="330dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="110dp"
+            android:paddingLeft="50dp"
             android:columnCount="1">
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
+                android:layout_marginVertical="5dp"
                 android:layout_marginTop="50dp"
-                android:text="Prueba" />
+                android:text="Amigos"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
-                android:text="Prueba" />
+                android:layout_marginVertical="5dp"
+                android:text="Recordatorio"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
-                android:text="Prueba" />
+                android:layout_marginVertical="5dp"
+                android:text="Tus Listas"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
-                android:text="Prueba" />
+                android:layout_marginVertical="5dp"
+                android:text="Calificaciones"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
-                android:text="Prueba" />
+                android:layout_marginVertical="5dp"
+                android:text="Insignias"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
             <Button
-                android:layout_width="200dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginVertical="25dp"
-                android:text="Prueba" />
+                android:layout_marginVertical="5dp"
+                android:text="Configuración"
+                android:textAlignment="viewStart"
+                android:paddingLeft="55dp"
+                android:background="@drawable/roundedbutton"
+                android:backgroundTint="@color/editTextGray"
+                android:textColor="@color/almostwhite"
+                android:textStyle="bold"/>
 
         </GridLayout>
     </ScrollView>
