@@ -34,6 +34,8 @@ class InicioFragment : Fragment() {
 
         val movieList = ArrayList<MovieModel>()
         movieList.add(MovieModel(R.drawable.godzillavskong,""))
+        movieList.add(MovieModel(R.drawable.godzillavskong,""))
+        movieList.add(MovieModel(R.drawable.godzillavskong,""))
 
         val adapter = MovieAdapter(movieList)
 

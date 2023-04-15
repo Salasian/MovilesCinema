@@ -4,7 +4,8 @@
     <item
         android:id="@+id/navigation_inicio"
         android:icon="@drawable/inicio_off_36x36"
-        android:title="@string/title_inicio" />
+        android:title="@string/title_inicio"
+        />
 
     <item
         android:id="@+id/navigation_cartelera"
