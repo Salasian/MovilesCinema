@@ -13,18 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left">
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="240dp"
-            android:layout_height="90dp"
-            android:background="#320302"
-            app:layout_constraintBottom_toBottomOf="@id/imageView2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:layout_marginLeft="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cines">
+
+        </TextView>
     </RelativeLayout>
 
     <GridLayout
