@@ -13,4 +13,5 @@
     <color name="Banner">#1E1E1E </color>
     <color name="Fondo">#333333</color>
     <color name="editTextGray">#5D6064</color>
+    <color name="grayBackground">#312927</color>
 </resources>
