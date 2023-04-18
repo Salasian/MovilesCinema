@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/almostblack"
+    >
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ubicacion_36x36" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="284dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:text="Ubicación"
+        android:textColor="@color/white"
+        android:textFontWeight="700"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical"
+        android:background="@color/Banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="108dp"
+            android:layout_gravity="center"
+            android:text="Selecciona tu ciudad y te mostraremos una cartelera con todas las películas disponibles en la zona"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:textFontWeight="700"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="País"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:layout_width="143dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/Banner"
+                android:text="México"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="Estado"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:layout_width="143dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/Banner"
+                android:text="Sonora"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            >
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:text="Ciudad"
+                android:textColor="@color/white"
+                android:textFontWeight="500"
+                android:textSize="18sp" />
+
+
+            <Button
+                android:layout_width="143dp"
+                android:layout_height="51dp"
+                android:layout_marginLeft="40dp"
+                android:backgroundTint="@color/Banner"
+                android:text="Cd. Obregón"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
