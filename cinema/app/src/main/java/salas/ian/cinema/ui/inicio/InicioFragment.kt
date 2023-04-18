@@ -1,16 +1,18 @@
 package salas.ian.cinema.ui.inicio
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import salas.ian.cinema.R
 import salas.ian.cinema.databinding.FragmentInicioBinding
 import salas.ian.cinema.ui.MovieAdapter
 import salas.ian.cinema.ui.MovieModel
+import salas.ian.cinema.ui.ubicacion.UbicacionActivity
 
 
 class InicioFragment : Fragment() {
@@ -38,6 +40,11 @@ class InicioFragment : Fragment() {
         movieList.add(MovieModel(R.drawable.godzillavskong,""))
 
         val adapter = MovieAdapter(movieList)
+        binding.botonUbicacion.setOnClickListener {
+            val intent = Intent(getActivity(), UbicacionActivity::class.java)
+            startActivity(intent)
+        }
+
 
         binding.apply {
             carouselRecyclerview.adapter=adapter
@@ -53,4 +60,7 @@ class InicioFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
+
 }

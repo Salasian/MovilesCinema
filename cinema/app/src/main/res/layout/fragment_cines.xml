@@ -66,6 +66,20 @@
             android:layout_marginTop="10dp"
             android:src="@drawable/ubicacion_36x36" />
 
+<<<<<<< HEAD
+=======
+        <Button
+            android:id="@+id/btn_ubicacion"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:text="Cine Obregón"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/roundedbutton"
+            android:backgroundTint="@color/editTextGray"
+            android:textColor="@color/almostwhite"/>
+
+>>>>>>> f59b4bd8fdd96f4421e69e8d02de78467b263f39
         <ImageButton
             android:id="@+id/buscar"
             android:layout_width="38dp"
