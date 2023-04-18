@@ -21,6 +21,7 @@
         app:srcCompat="@drawable/logoreel" />
 
     <Button
+        android:id="@+id/boton_ubicacion"
         android:layout_width="232dp"
         android:layout_height="43dp"
         android:layout_marginTop="4dp"

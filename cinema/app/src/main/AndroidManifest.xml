@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.SplashCinema"
-        tools:targetApi="31" >
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.ubicacion.UbicacionExactaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Cinema"/>
+        <activity
+            android:name=".ui.ubicacion.UbicacionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Cinema"/>
         <activity
             android:name=".ui.RegistrarseActivity"
             android:exported="false"
@@ -23,7 +31,7 @@
             android:name=".ui.InicioSesionActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat" >
+            android:theme="@style/Theme.AppCompat">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -39,6 +47,7 @@
         <activity
             android:name=".ui.cartelera.ratingCelda"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

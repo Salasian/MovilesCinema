@@ -37,15 +37,16 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginTop="2dp"
+        android:layout_marginTop="40dp"
+        android:background="@color/Banner"
         android:orientation="horizontal"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13"
-        tools:ignore="UseSwitchCompatOrMaterialXml"
-        android:background="@color/Banner">
+        tools:ignore="UseSwitchCompatOrMaterialXml">
 
         <TextView
             android:id="@+id/textView15"
@@ -66,7 +67,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="170dp"
         android:background="@color/Banner"
         android:orientation="horizontal"
         android:paddingLeft="15dp"
@@ -87,7 +88,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_ubicacion_exacta"
             android:layout_width="143dp"
             android:layout_height="51dp"
             android:layout_marginLeft="40dp"
