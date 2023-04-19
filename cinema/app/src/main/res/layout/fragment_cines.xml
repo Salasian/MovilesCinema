@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.cines.CinesFragment"
     android:orientation="vertical"
-    android:background="#312927">
+    android:background="@color/Banner">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -36,7 +36,7 @@
         >
 
         <ImageButton
-            android:id="@+id/boton"
+            android:id="@+id/boton_ubicacion"
             android:layout_width="232dp"
             android:layout_height="43dp"
             android:layout_row="0"

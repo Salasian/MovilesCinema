@@ -1,5 +1,6 @@
 package salas.ian.cinema.ui.cines
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import salas.ian.cinema.R
+import salas.ian.cinema.ui.ubicacion.UbicacionActivity
 
 class CinesFragment : Fragment() {
 
@@ -20,6 +22,7 @@ class CinesFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.fragment_cines, container, false)
     }
 
