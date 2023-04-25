@@ -28,6 +28,7 @@ class InicioFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         val homeViewModel =
             ViewModelProvider(this).get(InicioViewModel::class.java)
 
