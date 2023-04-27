@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:text="Cines"
             android:textSize="40sp"
+            android:layout_marginTop="12dp"
             android:layout_marginLeft="32dp"
             android:textStyle="bold"
             android:textColor="@color/almostwhite">
@@ -45,6 +46,7 @@
             android:backgroundTint="@color/editTextGray"
             android:text="Cd. Obregón, Sonora, Méx."
             android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
             android:textFontWeight="400"
             android:textSize="11sp"/>
         <TextView
@@ -52,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_row="0"
             android:layout_column="0"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="70dp"
             android:layout_marginTop="14dp"
             android:text="Cd. Obregón, Sonora, Mex."
             android:textColor="@color/white"
@@ -62,27 +64,38 @@
             android:layout_height="25dp"
             android:layout_row="0"
             android:layout_column="0"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="40dp"
             android:layout_marginTop="10dp"
             android:src="@drawable/ubicacion_36x36" />
         <ImageButton
             android:id="@+id/buscar"
-            android:layout_width="38dp"
-            android:layout_height="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="22dp"
+            android:maxHeight="22dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="fitCenter"
+
             android:layout_row="0"
             android:layout_column="1"
-            android:layout_marginLeft="29dp"
+            android:layout_marginLeft="100dp"
             android:background="@color/Banner"
             android:src="@drawable/busqueda_36x36"
             />
 
         <ImageButton
             android:id="@+id/imagen"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="22dp"
+            android:maxHeight="22dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="7dp"
             android:layout_row="0"
             android:layout_column="2"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="13dp"
             android:background="@color/Banner"
             android:src="@drawable/filtros_36x36"
             />
@@ -177,6 +190,7 @@
                                 android:layout_marginTop="-10dp"
                                 android:layout_gravity="center_horizontal"
                                 android:padding="5dp"
+
                                 />
                             <TextView
                                 android:layout_width="wrap_content"
