@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import salas.ian.cinema.R
 import salas.ian.cinema.databinding.FragmentCarteleraBinding
+import salas.ian.cinema.ui.ubicacion.UbicacionActivity
 
 class CarteleraFragment : Fragment() {
     var peliculas= ArrayList<Pelicula>()
@@ -31,6 +32,11 @@ class CarteleraFragment : Fragment() {
 
         _binding = FragmentCarteleraBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
+        binding.botonUbicacion.setOnClickListener {
+            val intent = Intent(getActivity(), UbicacionActivity::class.java)
+            startActivity(intent)
+        }
 
         cargarPeliculas()
         var gridPelis: GridView = binding.moviesCatalog
