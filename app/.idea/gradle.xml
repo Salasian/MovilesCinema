@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="GradleMigrationSettings" migrationVersion="1" />
+=======
+>>>>>>> c3cc715cfba2f518e645d00bd60aa5c66141c6da
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
+<<<<<<<< HEAD:app/.idea/gradle.xml
+========
+        <option name="gradleJvm" value="Embedded JDK" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+>>>>>>>> c3cc715cfba2f518e645d00bd60aa5c66141c6da:.idea/gradle.xml
+=======
+>>>>>>> c3cc715cfba2f518e645d00bd60aa5c66141c6da
       </GradleProjectSettings>
     </option>
   </component>
