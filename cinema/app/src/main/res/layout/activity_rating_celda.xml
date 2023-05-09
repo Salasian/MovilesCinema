@@ -21,11 +21,11 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-19dp"
-        android:layout_marginLeft="299dp"
+        android:layout_marginTop="-29dp"
+        android:layout_marginLeft="345dp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-light"
-        android:textSize="13sp"
+        android:textSize="16sp"
         android:id="@+id/fecha"/>
 
     <RatingBar
@@ -49,10 +49,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:layout_marginTop="-35dp"
-        android:layout_marginLeft="130dp"
+        android:layout_marginTop="-15dp"
+        android:layout_marginLeft="20dp"
         android:fontFamily="sans-serif-light"
-        android:textSize="13sp"
+        android:textSize="16sp"
         android:id="@+id/opinion11"/>
 
 

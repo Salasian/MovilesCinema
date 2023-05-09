@@ -28,11 +28,28 @@
     <GridView
         android:id="@+id/gridView"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:numColumns="3"
         android:columnWidth="100dp"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"/>
+
+    <Button
+        android:id="@+id/btn_agregar"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="@color/almostblack"
+        android:layout_marginLeft="265dp"
+        android:background="@drawable/roundedbuttonwhite"
+        android:text="Agregar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ingresar"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -42,7 +59,8 @@
         <ListView
             android:id="@+id/lista"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:dividerHeight="15dp"/>
     </ScrollView>
 

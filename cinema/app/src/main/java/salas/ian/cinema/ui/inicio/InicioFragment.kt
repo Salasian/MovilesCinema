@@ -8,7 +8,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.google.firebase.auth.ktx.auth
 import salas.ian.cinema.R
+import salas.ian.cinema.databinding.ActivityMainBinding
 import salas.ian.cinema.databinding.FragmentInicioBinding
 import salas.ian.cinema.ui.MovieAdapter
 import salas.ian.cinema.ui.MovieModel
@@ -27,6 +29,7 @@ class InicioFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View {
 
         val homeViewModel =
