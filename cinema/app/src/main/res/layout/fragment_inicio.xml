@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_inicio_scene"
+    tools:context=".ui.inicio.InicioFragment"
+    android:background="@color/almostblack"
+    android:theme="@style/Theme.AppCompat">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="410dp"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoreel" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/ubicacion_36x36"
+        android:translationZ="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/boton_ubicacion"
+        android:layout_width="204dp"
+        android:layout_height="42dp"
+        android:background="@drawable/roundedbutton"
+        android:backgroundTint="@color/Fondo"
+        android:paddingLeft="25dp"
+        android:text="Ciudad Obregon Sonora, Mex"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="134dp"
+        app:layout_constraintTop_toBottomOf="@+id/boton_ubicacion"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.jackandphantom.carouselrecyclerview.CarouselRecyclerview
+                android:id="@+id/carouselRecyclerview"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.494"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:text="Promociones cerca de ti"
+                android:textColor="@color/white"
+                android:textFontWeight="900"
+                android:textSize="25dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="94dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/promo2x1" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial2" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:padding="10dp"
+                app:srcCompat="@drawable/precioespecial3" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

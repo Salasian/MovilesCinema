@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Fondo"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:background="@color/Banner"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Cartelera"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="-155dp"
+            android:layout_marginTop="60dp"
+            android:padding="16dp"
+            android:background="@drawable/boton">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ubicacion_36x36"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/botonUbicacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Cd. Obregón, Sonora, Mex."
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/buscar"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="29dp"
+            android:background="@color/Banner"
+            android:layout_marginVertical="70dp"
+            android:src="@drawable/busqueda_36x36"
+            />
+
+        <ImageButton
+            android:id="@+id/imagen"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/Banner"
+            android:layout_marginVertical="70dp"
+            android:src="@drawable/filtros_36x36"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+    <GridView
+        android:layout_width="430dp"
+        android:layout_height="700dp"
+        android:numColumns="3"
+        android:layout_marginTop="10dp"
+        android:id="@+id/movies_catalog"
+        android:paddingHorizontal="15dp"
+        android:layout_marginBottom="50dp"/>
+
+    </ScrollView>
+
+</LinearLayout>

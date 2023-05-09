@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cines.CinesFragment"
+    android:orientation="vertical"
+    android:background="@color/Banner">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:background="@color/almostblack">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cines"
+            android:textSize="40sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="32dp"
+            android:textStyle="bold"
+            android:textColor="@color/almostwhite">
+
+        </TextView>
+    </RelativeLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:columnCount="3"
+        android:rowCount="1"
+        android:orientation="horizontal"
+        android:background="@color/almostblack"
+        >
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ubicacion_36x36"
+            />
+        <Button
+            android:id="@+id/botonUbicacion"
+            android:layout_width="204dp"
+            android:layout_height="42dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:background="@drawable/roundedbutton"
+            android:backgroundTint="@color/Fondo"
+            android:paddingLeft="25dp"
+            android:text="Ciudad Obregon Sonora, Mex"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_marginLeft="30dp"
+            android:textFontWeight="400"
+            android:textSize="11sp"/>
+
+        <ImageButton
+            android:id="@+id/buscar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="22dp"
+            android:maxHeight="22dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="fitCenter"
+
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_marginLeft="100dp"
+            android:background="@color/Banner"
+            android:src="@drawable/busqueda_36x36"
+            />
+
+        <ImageButton
+            android:id="@+id/imagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="22dp"
+            android:maxHeight="22dp"
+            android:scaleType="fitCenter"
+            android:layout_marginTop="7dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_marginLeft="13dp"
+            android:background="@color/Banner"
+            android:src="@drawable/filtros_36x36" />
+
+    </GridLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/squaregraybox">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="45dp"
+                        android:layout_marginVertical="15dp"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/cinema"/>
+                        <GridLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:rowCount="4"
+                            android:columnCount="2"
+                            android:layout_marginLeft="7dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cinépolis Bella Vista"
+                                android:textColor="@color/white"
+                                android:layout_column="0"
+                                android:layout_row="0"
+                                android:textStyle="bold"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Blvd. Rodolfo Elías Calles"
+                                android:textColor="@color/white"
+                                android:layout_column="0"
+                                android:layout_row="1"
+                                android:layout_marginTop="3dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2D, 3D, Sala Junior"
+                                android:textColor="@color/white"
+                                android:layout_column="0"
+                                android:layout_row="2"
+                                android:layout_marginTop="3dp"/>
+
+                            <RatingBar
+                                android:layout_gravity="center_horizontal"
+                                android:id="@+id/ratingbar"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_row="3"
+                                android:layout_column="0"
+                                android:progressTint="@color/yellow"
+                                android:max="5"
+                                android:numStars="5"
+                                android:isIndicator="true"
+                                android:transformPivotX="0dp"
+                                android:layout_marginTop="3dp"
+                                android:transformPivotY="0dp"
+                                android:rating="4.5"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Ver Calificaciones"
+                                android:textColor="@color/white"
+                                android:layout_column="0"
+                                android:layout_row="3"
+                                android:padding="4dp"
+                                android:textSize="11dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"/>
+
+                            <ImageButton
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/menu_36x36"
+                                android:layout_row="3"
+                                android:layout_column="1"
+                                android:layout_marginTop="-10dp"
+                                android:layout_gravity="center_horizontal"
+                                android:padding="5dp"
+
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Menú"
+                                android:textColor="@color/white"
+                                android:layout_column="1"
+                                android:layout_row="3"
+                                android:padding="4dp"
+                                android:textSize="8sp"
+                                android:layout_marginTop="13dp"
+                                android:layout_gravity="center"
+                                android:textStyle="bold"/>
+
+
+                        </GridLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/squaregraybox">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="45dp"
+            android:layout_marginVertical="15dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/cinema"/>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="4"
+                android:columnCount="2"
+                android:layout_marginLeft="7dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cinépolis Sendero"
+                    android:textColor="@color/white"
+                    android:layout_column="0"
+                    android:layout_row="0"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Plaza Sendero, Cd. Obreg"
+                    android:textColor="@color/white"
+                    android:layout_column="0"
+                    android:layout_row="1"
+                    android:layout_marginTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2D, 3D, Sala Junior"
+                    android:textColor="@color/white"
+                    android:layout_column="0"
+                    android:layout_row="2"
+                    android:layout_marginTop="3dp"/>
+
+                <RatingBar
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/ratingbar2"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_row="3"
+                    android:layout_column="0"
+                    android:progressTint="@color/yellow"
+                    android:max="5"
+                    android:numStars="5"
+                    android:isIndicator="true"
+                    android:transformPivotX="0dp"
+                    android:layout_marginTop="3dp"
+                    android:transformPivotY="0dp"
+                    android:rating="4.5"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Calificaciones"
+                    android:textColor="@color/white"
+                    android:layout_column="0"
+                    android:layout_row="3"
+                    android:padding="4dp"
+                    android:textSize="11dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/menu_36x36"
+                    android:layout_row="3"
+                    android:layout_column="1"
+                    android:layout_marginTop="-10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="5dp"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menú"
+                    android:textColor="@color/white"
+                    android:layout_column="1"
+                    android:layout_row="3"
+                    android:padding="4dp"
+                    android:textSize="8sp"
+                    android:layout_marginTop="13dp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"/>
+
+
+            </GridLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+        </LinearLayout>
