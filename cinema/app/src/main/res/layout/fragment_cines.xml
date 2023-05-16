@@ -176,19 +176,16 @@
                                 android:textStyle="bold"/>
 
                             <ImageButton
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/menu_36x36"
                                 android:layout_row="3"
                                 android:layout_column="1"
-                                android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="-10dp"
-                                android:adjustViewBounds="true"
-                                android:background="@color/Banner"
-                                android:maxWidth="22dp"
-                                android:maxHeight="22dp"
+                                android:layout_gravity="center_horizontal"
                                 android:padding="5dp"
-                                android:scaleType="fitCenter"
-                                android:src="@drawable/menu_36x36" />
+
+                                />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -200,8 +197,7 @@
                                 android:textSize="8sp"
                                 android:layout_marginTop="13dp"
                                 android:layout_gravity="center"
-                                android:textStyle="bold"
-                                />
+                                android:textStyle="bold"/>
 
 
                         </GridLayout>
@@ -290,19 +286,15 @@
                     android:textStyle="bold"/>
 
                 <ImageButton
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/menu_36x36"
                     android:layout_row="3"
                     android:layout_column="1"
-                    android:layout_gravity="center_horizontal"
                     android:layout_marginTop="-10dp"
-                    android:adjustViewBounds="true"
-                    android:background="@color/Banner"
-                    android:maxWidth="22dp"
-                    android:maxHeight="22dp"
+                    android:layout_gravity="center_horizontal"
                     android:padding="5dp"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/menu_36x36" />
+                    />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
