@@ -4,26 +4,27 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.google.firebase.firestore.FirebaseFirestore
 import salas.ian.cinema.R
 
 class ratingCelda : AppCompatActivity() {
 
     var opiniones= ArrayList<Opinion>()
+    private lateinit var db: FirebaseFirestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rating_pelicula)
 
+        db= FirebaseFirestore.getInstance()
+
         agregarOpinion()
 
-        var listView: ListView= findViewById(R.id.lista)
-
-        var adaptador: OpinionAdapter= OpinionAdapter(this, opiniones)
-        listView.adapter= adaptador
 
         val gridView: GridView = findViewById(R.id.gridView)
         val items = listOf(
@@ -45,9 +46,18 @@ class ratingCelda : AppCompatActivity() {
     }
 
     fun agregarOpinion(){
-        opiniones.add(Opinion("Alex Gael", "30/03/23", "Me gusto"))
-        opiniones.add(Opinion("Juan Sotelo", "30/03/23", "Muy Buena"))
-        opiniones.add(Opinion("Cesar Haro", "30/03/23", "Muy mala"))
+        db.collection("comentarios").get().addOnSuccessListener { resultado->
+            for(documento in resultado){
+                val op= documento.toObject(Opinion::class.java)
+                opiniones.add(op)
+                Log.d("Opinión Agregada:", "$op")
+            }
+            Log.d("Opiniones", "$opiniones")
+
+            var listView: ListView= findViewById(R.id.lista)
+            var adaptador: OpinionAdapter= OpinionAdapter(this, opiniones)
+            listView.adapter= adaptador
+        }
     }
 
     class OpinionAdapter: BaseAdapter{
@@ -78,10 +88,12 @@ class ratingCelda : AppCompatActivity() {
             var nombre= vista.findViewById(R.id.nombre1) as TextView
             var fecha= vista.findViewById(R.id.fecha) as TextView
             var opinion11= vista.findViewById(R.id.opinion11) as TextView
+            var rating: RatingBar= vista.findViewById(R.id.ratingbar)
 
-            nombre.setText(opinion.Nombre)
-            fecha.setText(opinion.Fecha)
-            opinion11.setText(opinion.Opinion)
+            nombre.setText(opinion.nombre)
+            fecha.setText(opinion.fecha)
+            opinion11.setText(opinion.comentario)
+            rating.setRating(opinion.calificacion)
 
             return vista
         }

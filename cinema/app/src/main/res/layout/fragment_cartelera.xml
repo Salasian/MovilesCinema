@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="133dp"
-        android:background="@color/Banner"
+        android:background="@color/almostblack"
         android:orientation="horizontal">
 
         <TextView
@@ -41,7 +41,7 @@
                 android:src="@drawable/ubicacion_36x36"
                 android:layout_gravity="center_vertical"/>
 
-            <Button
+            <TextView
                 android:id="@+id/botonUbicacion"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,21 +55,23 @@
 
         <ImageButton
             android:id="@+id/buscar"
-            android:layout_width="38dp"
-            android:layout_height="35dp"
-            android:layout_marginLeft="29dp"
-            android:background="@color/Banner"
-            android:layout_marginVertical="70dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="40dp"
+            android:background="@color/almostblack"
+            android:scaleType="centerInside"
+            android:layout_marginVertical="78dp"
             android:src="@drawable/busqueda_36x36"
             />
 
         <ImageButton
             android:id="@+id/imagen"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:layout_marginLeft="5dp"
-            android:background="@color/Banner"
-            android:layout_marginVertical="70dp"
+            android:scaleType="centerInside"
+            android:background="@color/almostblack"
+            android:layout_marginVertical="78dp"
             android:src="@drawable/filtros_36x36"
             />
     </LinearLayout>

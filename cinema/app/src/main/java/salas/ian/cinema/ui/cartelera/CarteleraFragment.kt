@@ -1,86 +1,75 @@
 package salas.ian.cinema.ui.cartelera
 
+import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.bumptech.glide.Glide
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
+import com.google.firebase.firestore.CollectionReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
+import com.google.firebase.ktx.Firebase
 import salas.ian.cinema.R
 import salas.ian.cinema.databinding.FragmentCarteleraBinding
 import salas.ian.cinema.ui.ubicacion.UbicacionActivity
 
 class CarteleraFragment : Fragment() {
     var peliculas= ArrayList<Pelicula>()
-
     private var _binding: FragmentCarteleraBinding? = null
+    private lateinit var db: FirebaseFirestore
 
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(CarteleraViewModel::class.java)
+        override fun onCreateView(
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
+        ): View {
+            val dashboardViewModel =
+                ViewModelProvider(this).get(CarteleraViewModel::class.java)
 
-        _binding = FragmentCarteleraBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+            db= FirebaseFirestore.getInstance()
 
-        binding.botonUbicacion.setOnClickListener {
-            val intent = Intent(getActivity(), UbicacionActivity::class.java)
-            startActivity(intent)
+            _binding = FragmentCarteleraBinding.inflate(inflater, container, false)
+            val root: View = binding.root
+
+            cargarPeliculas()
+
+            return root
         }
-
-        cargarPeliculas()
-        var gridPelis: GridView = binding.moviesCatalog
-        var adaptador= PeliculaAdapter(requireContext(), peliculas)
-
-
-        gridPelis.adapter= adaptador
-
-        return root
-    }
-
-    fun cargarPeliculas() {
-        peliculas.add(Pelicula("Godzilla vs Kong",
-            R.drawable.king_kong, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro", "Carlos Valle","\" Sinopsis Actual", "B", "Acción", "",  4.5f, "115"))
-        peliculas.add(Pelicula("Caos: El Inicio",
-            R.drawable.caos_el_inicio, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual.’", "B", "Aventura", "Ciencia F.",4.5f, "115"))
-        peliculas.add(Pelicula("El Protector",
-            R.drawable.el_protector, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual.’", "B", "Acción", "",4.5f, "115"))
-        peliculas.add(Pelicula("UUUPS! 2 La Aventura Continúa",
-            R.drawable.uuups, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Animación", "",4.5f, "115"))
-        peliculas.add(Pelicula("El Día del Fin del Mundo",
-            R.drawable.el_dia_del_fin_del_mundo, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Acción", "Thriller",4.5f, "115"))
-        peliculas.add(Pelicula("El Tunel",
-            R.drawable.el_tunel, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Thriller", "Acción",4.5f, "115"))
-        peliculas.add(Pelicula("Tom y Jerry",
-            R.drawable.tom_y_jerry, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Animación", "",4.5f, "115"))
-        peliculas.add(Pelicula("Pinocho",
-            R.drawable.pinocho, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Fantasía", "Drama",4.5f, "115"))
-        peliculas.add(Pelicula("Juega Conmigo",
-            R.drawable.juega_conmigo, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Terror", "",4.5f, "115"))
-        peliculas.add(Pelicula("Mujer Maravilla",
-            R.drawable.mujer_maravilla, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Acción", "", 4.5f, "115"))
-        peliculas.add(Pelicula("El Cazador de Mounstros",
-            R.drawable.cazador_de_mostruos, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Terror", "Fantasía",4.5f, "115"))
-        peliculas.add(Pelicula("Dime Cuando Tú",
-            R.drawable.dime_cuando_tu, "Juan Carlos", "Alex Gael", "Juan Sotelo", "Cesar Haro","Carlos Valle","\"Sinopsis Actual’", "B", "Drama", "Comedia",4.5f, "115"))
-
-    }
-
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-    class PeliculaAdapter: BaseAdapter {
+
+    private fun cargarPeliculas() {
+        db.collection("pelicula").get().addOnSuccessListener { resultado->
+            for(documento in resultado){
+                val peli= documento.toObject(Pelicula::class.java)
+                peliculas.add(peli)
+                Log.d("Pelicula Agregada:", "$peli")
+            }
+            Log.d("Peliculas", "$peliculas")
+
+            var gridPelis = binding.moviesCatalog
+            var adaptador = PeliculaAdapter(requireContext(), peliculas)
+            gridPelis.adapter = adaptador
+        }
+    }
+
+
+  class PeliculaAdapter: BaseAdapter {
         var context: Context?=null
         var peliculas= ArrayList<Pelicula>()
 
@@ -111,7 +100,9 @@ class CarteleraFragment : Fragment() {
             var categoria2: TextView= vista.findViewById(R.id.categoria2)
             var rating: RatingBar= vista.findViewById(R.id.ratingbar)
 
-            image.setImageResource(pelicula.Image)
+            Glide.with(context!!)
+                .load(pelicula.Image)
+                .into(image)
             title.setText(pelicula.titulo)
             categoria1.setText(pelicula.Categoria1)
             categoria2.setText(pelicula.Categoria2)
@@ -133,8 +124,9 @@ class CarteleraFragment : Fragment() {
                 intento.putExtra("Director", pelicula.Director)
                 intento.putExtra("sinopsis", pelicula.Sinopsis)
                 intento.putExtra("Clasificacion", pelicula.Clasificacion)
-                intento.putExtra("Duracion", pelicula.duracion)
+                intento.putExtra("Duracion", pelicula.Duracion)
                 intento.putExtra("Categoria", pelicula.Categoria1)
+                intento.putExtra("Rating", pelicula.Rating)
                 vista.context.startActivity(intento)
 
             }

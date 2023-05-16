@@ -1,3 +1,7 @@
 package salas.ian.cinema.ui.cartelera
 
-data class Opinion (var Nombre: String, var Fecha: String, var Opinion: String)
+import java.io.Serializable
+
+data class Opinion (
+    var nombre: String="", var fecha: String="", var comentario: String="",
+    var calificacion: Float=0.0f): Serializable

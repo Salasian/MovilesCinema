@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import salas.ian.cinema.R
 
 
@@ -56,6 +57,7 @@ class Datos: AppCompatActivity() {
         var duracion: TextView = findViewById(R.id.duracion)
         var clasificacion: TextView = findViewById(R.id.clasificacion)
         var categoria: TextView = findViewById(R.id.categoria)
+        var ratingBar: RatingBar= findViewById(R.id.ratingbar)
 
 
         if (bundle != null) {
@@ -72,8 +74,12 @@ class Datos: AppCompatActivity() {
             duracion.setText(bundle.getString("Duracion"))
             categoria.setText(bundle.getString("Categoria"))
             titulo.setText(bundle.getString("Titulo"))
-            imagen.setImageResource(bundle.getInt("image"))
-
+            val rating= bundle.getFloat("Rating")
+            ratingBar.rating= rating
+            val imageUrl = bundle.getString("image")
+            Glide.with(this)
+                .load(imageUrl)
+                .into(imagen)
         }
 
     }
