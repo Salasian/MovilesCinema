@@ -43,6 +43,13 @@ class ratingCelda : AppCompatActivity() {
                 2 -> startActivity(Intent(this, ratingCelda::class.java))
             }
         }
+
+        val editText: EditText= findViewById(R.id.edit)
+        editText.setOnClickListener{
+            val intent= Intent(this, agregarOpinion::class.java)
+            startActivity(intent)
+            }
+
     }
 
     fun agregarOpinion(){

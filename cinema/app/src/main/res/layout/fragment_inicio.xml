@@ -87,6 +87,7 @@
                 tools:layout_editor_absoluteY="94dp" />
 
             <ImageView
+                android:id="@+id/oferta1"
                 android:layout_width="match_parent"
                 android:layout_height="164dp"
                 android:padding="10dp"
@@ -94,12 +95,14 @@
 
 
             <ImageView
+                android:id="@+id/oferta2"
                 android:layout_width="match_parent"
                 android:layout_height="164dp"
                 android:padding="10dp"
                 app:srcCompat="@drawable/precioespecial1" />
 
             <ImageView
+                android:id="@+id/oferta3"
                 android:layout_width="match_parent"
                 android:layout_height="164dp"
                 android:padding="10dp"
@@ -107,6 +110,7 @@
 
 
             <ImageView
+                android:id="@+id/oferta4"
                 android:layout_width="match_parent"
                 android:layout_height="164dp"
                 android:padding="10dp"

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Fondo"
+    android:layout_height="match_parent"
+    tools:context=".ui.cartelera.agregarOpinion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/Banner"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Película"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="370dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="55dp"
+            android:layout_marginTop="-50dp"
+            android:text="¿Qué calificación le das?"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold">
+        </TextView>
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:id="@+id/rating"
+            android:layout_marginTop="60dp"
+            android:progressTint="@color/yellow"
+            android:layout_marginLeft="-265dp">
+        </RatingBar>
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="310dp"
+            android:layout_height="155dp"
+            android:padding="14dp"
+            android:layout_marginLeft="-275dp"
+            android:layout_marginTop="140dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="Escribe un comentario..."
+            android:textSize="15sp"
+            android:background="@drawable/boton"/>
+
+        <EditText
+            android:id="@+id/edit2"
+            android:layout_width="250dp"
+            android:layout_height="45dp"
+            android:padding="14dp"
+            android:layout_marginLeft="-285dp"
+            android:layout_marginTop="260dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:hint="Escribe tu nombre..."
+            android:textSize="15sp"
+            android:background="@drawable/boton"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/layout"
+        android:gravity="center_vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:id="@+id/cancelar"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/boton"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Cancelar"
+            android:textSize="10dp"
+            android:textColor="@color/white">
+
+        </Button>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/calificar"
+            android:layout_marginLeft="140dp"
+            android:background="@drawable/boton2"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:text="Calificar"
+            android:textSize="10dp"
+            android:textColor="@color/almostblack">
+
+        </Button>
+
+    </LinearLayout>
+
+</LinearLayout>

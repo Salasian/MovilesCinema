@@ -7,53 +7,69 @@
     android:orientation="vertical"
     tools:context=".ui.cartelera.ratingCelda">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="7dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="22dp"
+            android:maxHeight="22dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/person_24dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:layout_marginTop="20dp"
+                android:text="nombre"
+                android:textStyle="bold"
+                android:id="@+id/nombre1"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-light"
+                android:textSize="16sp"
+                android:layout_marginTop="-25dp"
+                android:textAlignment="viewEnd"
+                android:text="fecha"
+                android:layout_marginRight="12dp"
+                android:maxLines="1"
+                android:maxLength="10"
+                android:ellipsize="end"
+                android:id="@+id/fecha"/>
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="235dp"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="@color/yellow"
+                android:layout_marginLeft="-60dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:stepSize="0.5" />
+        </LinearLayout>
+    </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginTop="19dp"
-        android:layout_marginLeft="130dp"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:id="@+id/nombre1"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-29dp"
-        android:layout_marginLeft="345dp"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-light"
         android:textSize="16sp"
-        android:id="@+id/fecha"/>
-
-    <RatingBar
-        android:id="@+id/ratingbar"
-        android:layout_width="235dp"
-        android:layout_height="wrap_content"
-        android:numStars="5"
-        android:layout_marginLeft="70dp"
-        android:progressTint="@color/yellow"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
-        android:stepSize="0.5" />
-
-    <ImageView
-        android:layout_width="110dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="-90dp"
-        android:src="@drawable/person_24dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:layout_marginTop="-15dp"
+        android:text="Opinion"
         android:layout_marginLeft="20dp"
-        android:fontFamily="sans-serif-light"
-        android:textSize="16sp"
         android:id="@+id/opinion11"/>
-
-
 </LinearLayout>

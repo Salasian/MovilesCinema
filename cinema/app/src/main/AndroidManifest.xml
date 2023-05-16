@@ -14,13 +14,22 @@
         android:theme="@style/Theme.SplashCinema"
         tools:targetApi="31">
         <activity
+            android:name=".EstrenosCelda"
+            android:exported="false" />
+        <activity
+            android:name=".CinesCelda"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cartelera.agregarOpinion"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
             android:name=".ui.ubicacion.UbicacionExactaActivity"
             android:exported="false"
-            android:theme="@style/Theme.Cinema"/>
+            android:theme="@style/Theme.Cinema" />
         <activity
             android:name=".ui.ubicacion.UbicacionActivity"
             android:exported="false"
-            android:theme="@style/Theme.Cinema"/>
+            android:theme="@style/Theme.Cinema" />
         <activity
             android:name=".ui.RegistrarseActivity"
             android:exported="false"
